@@ -15,7 +15,7 @@ How to
 ------
 
 ```
-docker run -p 2181:2181 -p 8081:8081 -p 9092:9092 -d kafka-stack
+docker run -p 2181:2181 -p 8081:8081 -p 9092:9092 -e KAFKA_ADVERTISED_LISTENERS=localhost -d kafka-stack
 ```
 
 Zookeeper is available at port `2181`, Schema Registry at `8081` and Kafka at `9092`.
