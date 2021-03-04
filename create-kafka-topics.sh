@@ -1,8 +1,8 @@
 #!/bin/bash -e
-echo "AAAAAAAAAAAAAAAAAAAA"
+
 if [[ -n "$KAFKA_CREATE_TOPICS" ]]; then
 	topics=$(echo $KAFKA_CREATE_TOPICS | tr "," "\n")
-    echo $topics
+
 	for topic in $topics
 	do
 		config=($(echo $topic | tr ":" "\n"))
